@@ -1,0 +1,39 @@
+body {
+	margin: 0 auto;
+	padding: 6rem;
+	background-color: rgb(250, 245, 250);
+	color: rgb(20, 20, 20);
+	font-family: monospace;
+	width: 66ch;
+}
+
+a {
+	color: rgb(20, 20, 20);
+}
+
+a:visited {
+	color: rgb(100, 100, 100);
+}
+
+.introduction {
+	margin-bottom: 4rem;
+	white-space: pre-line;
+}
+
+.game {
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+}
+
+.game__title {
+	font-weight: bold;
+}
+
+.game__dates {
+	white-space: pre-line;
+}
+
+.history {
+	white-space: pre-line;
+}
+
