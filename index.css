@@ -11,6 +11,7 @@ body {
 
 h1 {
 	font-size: 0.9rem;
+	margin: 0 0 1rem;
 }
 
 a {
@@ -46,8 +47,8 @@ td:first-child {
 }
 
 .game {
-	margin-bottom: 3rem;
-	margin-top: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .game__title {
@@ -63,7 +64,7 @@ td:first-child {
 }
 
 .standings {
-	margin: 6rem 0;
+	margin: 3rem 0;
 }
 
 .standings p {
@@ -71,5 +72,5 @@ td:first-child {
 }
 
 .schedule__season {
-	font-weight: bold;
+	margin-bottom: 3rem;
 }
