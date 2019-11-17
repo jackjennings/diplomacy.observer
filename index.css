@@ -4,7 +4,13 @@ body {
 	background-color: rgb(250, 245, 250);
 	color: rgb(20, 20, 20);
 	font-family: monospace;
-	width: 66ch;
+	width: 72ch;
+	font-size: 0.9rem;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 0.9rem;
 }
 
 a {
@@ -13,6 +19,25 @@ a {
 
 a:visited {
 	color: rgb(100, 100, 100);
+}
+
+table {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+th,
+td {
+	padding: 0 1rem 0 0;
+	margin: 0;
+	text-align: right;
+}
+
+th:first-child,
+td:first-child {
+	text-align: left;
+	width: 100%;
 }
 
 .introduction {
@@ -37,3 +62,14 @@ a:visited {
 	white-space: pre-line;
 }
 
+.standings {
+	margin: 6rem 0;
+}
+
+.standings p {
+	white-space: pre-line;
+}
+
+.schedule__season {
+	font-weight: bold;
+}
