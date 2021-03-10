@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/5689125148033024",
+  "powers": {
+    "austria": {
+      "player": "Wong & Janus",
+      "result": 0
+    },
+    "britain": {
+      "player": "Armstrong",
+      "result": 0
+    },
+    "france": {
+      "player": "Hansen",
+      "result": 0
+    },
+    "germany": {
+      "player": "Gadberry",
+      "result": 18
+    },
+    "italy": {
+      "player": "Quinland",
+      "result": 1
+    },
+    "russia": {
+      "player": "Pines",
+      "result": 3
+    },
+    "turkey": {
+      "player": "Pressman",
+      "result": 13
+    }
+  }
+}

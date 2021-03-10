@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2020-010/5674384465854464",
+  "powers": {
+    "austria": {
+      "player": "Gocek",
+      "result": 0
+    },
+    "britain": {
+      "player": "Brown",
+      "result": 0
+    },
+    "france": {
+      "player": "McGovern",
+      "result": 16
+    },
+    "germany": {
+      "player": "Pressman",
+      "result": 0
+    },
+    "italy": {
+      "player": "Kurson",
+      "result": 0
+    },
+    "russia": {
+      "player": "Klausman",
+      "result": 18
+    },
+    "turkey": {
+      "player": "James",
+      "result": 0
+    }
+  }
+}

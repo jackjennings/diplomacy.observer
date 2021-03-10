@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2019-010/5593675904581632",
+  "powers": {
+    "austria": {
+      "player": "Pines",
+      "result": 0
+    },
+    "britain": {
+      "player": "Padrón Hernández",
+      "result": 1
+    },
+    "france": {
+      "player": "Scholtens",
+      "result": 5
+    },
+    "germany": {
+      "player": "Armstrong",
+      "result": 8
+    },
+    "italy": {
+      "player": "Pressman",
+      "result": 0
+    },
+    "russia": {
+      "player": "Gadberry",
+      "result": 20
+    },
+    "turkey": {
+      "player": "Ness",
+      "result": 0
+    }
+  }
+}

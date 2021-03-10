@@ -1,0 +1,33 @@
+{
+  "variant": "colonial",
+  "powers": {
+    "britain": {
+      "player": "Pressman",
+      "result": 0
+    },
+    "china": {
+      "player": "Padrón Hernández",
+      "result": 0
+    },
+    "france": {
+      "player": "Armstrong",
+      "result": 2
+    },
+    "holland": {
+      "player": "Pines",
+      "result": 14
+    },
+    "japan": {
+      "player": "Kurson",
+      "result": 9
+    },
+    "russia": {
+      "player": "Denisov",
+      "result": 25
+    },
+    "turkey": {
+      "player": "Gocek",
+      "result": 8
+    }
+  }
+}

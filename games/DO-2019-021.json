@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2019-021/5941257069658112",
+  "powers": {
+    "austria": {
+      "player": "Domanico",
+      "result": 1
+    },
+    "britain": {
+      "player": "Denisov",
+      "result": 11
+    },
+    "france": {
+      "player": "Gadberry",
+      "result": 4
+    },
+    "germany": {
+      "player": "Janus",
+      "result": 0
+    },
+    "italy": {
+      "player": "Armstrong",
+      "result": 0
+    },
+    "russia": {
+      "player": "Gocek",
+      "result": 18
+    },
+    "turkey": {
+      "player": "Storey",
+      "result": 0
+    }
+  }
+}

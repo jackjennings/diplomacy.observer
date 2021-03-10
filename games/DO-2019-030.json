@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2019-031/4860180909522944",
+  "powers": {
+    "austria": {
+      "player": "Brown",
+      "result": 17
+    },
+    "britain": {
+      "player": "Possingham",
+      "result": 0
+    },
+    "france": {
+      "player": "Armstrong",
+      "result": 2
+    },
+    "germany": {
+      "player": "Storm",
+      "result": 17
+    },
+    "italy": {
+      "player": "Gropp",
+      "result": 0
+    },
+    "russia": {
+      "player": "Pressman",
+      "result": 0
+    },
+    "turkey": {
+      "player": "Black",
+      "result": 0
+    }
+  }
+}
