@@ -1,0 +1,72 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "set"
+
+DEFAULT_SCORE = 100
+BET = 30
+JOINT_PLAYER_SEPARATOR = " & ".freeze
+
+games =
+  Dir.glob("./games/*.json")
+     .sort
+     .map(&File.method(:read))
+     .map(&JSON.method(:parse))
+
+players = Set[
+  *games.flat_map do |g|
+    g["powers"].values.flat_map do |p|
+      p["player"].split(JOINT_PLAYER_SEPARATOR)
+    end
+  end
+]
+
+scores = players.map {|p| [p, DEFAULT_SCORE] }.to_h
+
+games.each do |game|
+  powers = game["powers"]
+  surviving_powers = powers.dup.keep_if { |_, p| p["result"].to_i > 0 && p["surrender"] != true }
+  sum = surviving_powers.values.sum { |p| p["result"].to_i**2 }
+  pool = BET * powers.values.size
+
+  powers.each do |_, power|
+    power["player"].split(JOINT_PLAYER_SEPARATOR).each do |player|
+      portion = power["result"].to_i**2 / sum.to_f
+      score = (portion * pool) - BET
+      scores[player] = [scores[player] + score, DEFAULT_SCORE].max
+
+      if player == "Denisov"
+        puts power["result"]
+        puts score
+      end
+    end
+  end
+end
+
+scores.entries.sort_by { |p, s| [-s, p] }.each do |(player, score)|
+  puts "#{player.ljust(20)}#{score}"
+end
+
+page = <<~HTML
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diplomacy Observer: Stats</title>
+    <link rel="stylesheet" media="all" href="./index.css">
+  </head>
+  <body>
+    #{games.map { |game| <<~GAME
+      <div class="game">
+        Board: #{game["board"]}
+      </div>
+
+    GAME
+    }.join}
+  </body>
+</html>
+HTML
+
+File.open("stats.html", "w") do |f|
+  f.write page
+end
