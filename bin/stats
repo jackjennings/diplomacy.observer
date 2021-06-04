@@ -22,6 +22,9 @@ players = Set[
   end
 ]
 
+# TODO: Introduce a Player class
+player_powers = {}
+
 scores = players.map {|p| [p, DEFAULT_SCORE] }.to_h
 
 games.each do |game|
@@ -30,22 +33,27 @@ games.each do |game|
   sum = surviving_powers.values.sum { |p| p["result"].to_i**2 }
   pool = BET * powers.values.size
 
-  powers.each do |_, power|
+  powers.each do |country_name, power|
     power["player"].split(JOINT_PLAYER_SEPARATOR).each do |player|
+      player_powers[player] ||= []
+      player_powers[player] << country_name
+
       portion = power["result"].to_i**2 / sum.to_f
       score = (portion * pool) - BET
       scores[player] = [scores[player] + score, DEFAULT_SCORE].max
-
-      if player == "Denisov"
-        puts power["result"]
-        puts score
-      end
     end
   end
 end
 
 scores.entries.sort_by { |p, s| [-s, p] }.each do |(player, score)|
   puts "#{player.ljust(20)}#{score}"
+end
+
+puts "\n\n"
+
+puts "Last two powers:"
+player_powers.entries.sort_by(&:first).map do |player, played_as|
+  puts "#{"#{player}:".ljust(20)}#{played_as.reverse.first(2).join("\t")}"
 end
 
 page = <<~HTML
