@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2020-020/5786459506737152",
+  "powers": {
+    "austria": {
+      "player": "Padrón Hernández",
+      "result": 0
+    },
+    "britain": {
+      "player": "Gadberry",
+      "result": 9
+    },
+    "france": {
+      "player": "Wales",
+      "result": 0
+    },
+    "germany": {
+      "player": "Randall",
+      "result": 7
+    },
+    "italy": {
+      "player": "Klausman",
+      "result": 10
+    },
+    "russia": {
+      "player": "Kurson",
+      "result": 0
+    },
+    "turkey": {
+      "player": "Qadeer",
+      "result": 8
+    }
+  }
+}
