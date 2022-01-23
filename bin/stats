@@ -46,7 +46,7 @@ games.each do |game|
 end
 
 scores.entries.sort_by { |p, s| [-s, p] }.each do |(player, score)|
-  puts "#{player.ljust(20)}#{score}"
+  puts "#{player.ljust(20)}#{score.ceil(1)}"
 end
 
 puts "\n\n"
