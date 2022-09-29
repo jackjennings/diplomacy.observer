@@ -1,0 +1,64 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "set"
+
+players = ARGV
+powers = ["britain", "austria", "russia", "turkey", "italy", "germany", "france"]
+flags = {
+  austria: ":austrianempire:",
+  britain: ":uk:",
+  france: ":flag-fr:",
+  germany: ":germanempire:",
+  italy: ":italiankingdom:",
+  russia: ":flag-ru:",
+  turkey: ":flag-tr:",
+}
+games =
+  Dir.glob("games/*.json")
+    .map(&File.method(:read))
+    .map(&JSON.method(:load))
+    .reverse
+threshold = 3
+
+previous_assignments = games.reduce({}) do |memo, game|
+  updates = game["powers"].entries.reduce({}) do |updates, (power, attrs)|
+    player = attrs["player"]
+    past_powers = memo[player] || Set.new
+    recent_powers = Set.new([*past_powers, power].first(threshold))
+    updates.merge(player => recent_powers)
+  end
+
+  memo.merge(updates)
+end
+assignments = []
+
+def any_previously_played?(history, proposed_assignments)
+  proposed_assignments.any? do |(power, player)|
+    past_powers = history[player]
+    past_powers.nil? || past_powers.include?(power)
+  end
+end
+
+while assignments.empty? || any_previously_played?(previous_assignments, assignments) do
+  assignments = powers.zip(players.shuffle)
+end
+
+puts
+puts ":world_map: Assignments\n\n"
+
+assignments
+  .sort
+  .each do |(power, player)|
+    puts "#{flags[power.to_sym]} #{player} (#{previous_assignments[player].to_a.sort.join(", ")})"
+  end
+
+puts <<~MORE
+
+The first orders will be due via DM next Wednesday (XXX) at midnight PT. Gameboard is linked in the bookmarks above.
+
+Please update your image / flag status / username appropriately. :bow:
+
+Add an emoji reaction to this message to indicate that you're ready to diplomatize.
+MORE

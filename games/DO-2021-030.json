@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2021-030/5089606314491904",
+  "powers": {
+    "austria": {
+      "player": "Birnbaum",
+      "result": 1
+    },
+    "britain": {
+      "player": "Gocek",
+      "result": 18
+    },
+    "france": {
+      "player": "Gadberry",
+      "result": 10
+    },
+    "germany": {
+      "player": "Randall",
+      "result": 0
+    },
+    "italy": {
+      "player": "Bradtke",
+      "result": 0
+    },
+    "russia": {
+      "player": "Pressman",
+      "result": 0
+    },
+    "turkey": {
+      "player": "Kurson",
+      "result": 5
+    }
+  }
+}

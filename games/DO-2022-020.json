@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2022-010/5108259341729792",
+  "powers": {
+    "austria": {
+      "player": "Ongweso",
+      "result": 0
+    },
+    "britain": {
+      "player": "Karman",
+      "result": 0
+    },
+    "france": {
+      "player": "Qadeer",
+      "result": 1
+    },
+    "germany": {
+      "player": "Pressman",
+      "result": 8
+    },
+    "italy": {
+      "player": "Randall",
+      "result": 12
+    },
+    "russia": {
+      "player": "Birnbaum",
+      "result": 1
+    },
+    "turkey": {
+      "player": "Bradtke",
+      "result": 12
+    }
+  }
+}

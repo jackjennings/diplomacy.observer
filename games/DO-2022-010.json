@@ -1,0 +1,33 @@
+{
+  "board": "—",
+  "powers": {
+    "japan": {
+      "player": "Bradtke",
+      "result": 0
+    },
+    "holland": {
+      "player": "Birnbaum",
+      "result": 0
+    },
+    "china": {
+      "player": "Karman",
+      "result": 0
+    },
+    "russia": {
+      "player": "Ongweso",
+      "result": 0
+    },
+    "turkey": {
+      "player": "Pines",
+      "result": 0
+    },
+    "britain": {
+      "player": "Kurson",
+      "result": 0
+    },
+    "france": {
+      "player": "Gocek",
+      "result": 0
+    }
+  }
+}
