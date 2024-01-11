@@ -1,0 +1,33 @@
+{
+  "board": "https://www.backstabbr.com/sandbox/DO-2023-020/5171713229324288",
+  "powers": {
+    "austria": {
+      "player": "Kurson",
+      "result": 0
+    },
+    "britain": {
+      "player": "Pressman",
+      "result": 10
+    },
+    "france": {
+      "player": "Ktulue",
+      "result": 0
+    },
+    "germany": {
+      "player": "Denisov",
+      "result": 9
+    },
+    "italy": {
+      "player": "Pines",
+      "result": 1
+    },
+    "russia": {
+      "player": "Gadberry",
+      "result": 1
+    },
+    "turkey": {
+      "player": "Karman",
+      "result": 13
+    }
+  }
+}
